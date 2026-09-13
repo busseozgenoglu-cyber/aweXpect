@@ -24,6 +24,17 @@ await Expect.That(subject).IsOneOf('a', 'b', 'c');
 await Expect.That(subject).IsNotOneOf('x', 'y', 'z');
 ```
 
+## Between
+
+You can verify that the `char` is inside or outside an inclusive range.
+
+```csharp
+char subject = 'm';
+
+await Expect.That(subject).IsBetween('a').And('z');
+await Expect.That(subject).IsNotBetween('0').And('9');
+```
+
 ## Is
 
 ### An ASCII letter
